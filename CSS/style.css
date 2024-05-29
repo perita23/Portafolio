@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: "Kanit", sans-serif;
+}
+
+/*General Styles*/
+/*--> bg - grandient --*/
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+#bg-gradient {
+    position: fixed;
+    width: 100vw;
+    height: 100vw;
+    background: linear-gradient(145deg, #cebcb2, #797979, #383838);
+    background-size: 180% 180%;
+    animation: gradient-animation 15s ease-in-out infinite;
+}
+
+
+
+/*--> blurr on bg-gradient --*/
+#blurr {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(50px);
+    background-color: rgba(255, 255, 255, 0.055);
+}
+
+/* Header Styles & organization*/
+
+#home-header {
+    display: grid;
+    height: 6vh;
+    grid-template-columns: 50% 50%;
+}
+
+/*--> Socialmedia - links --*/
+#header-socialmedia {
+    align-self: center;
+}
+
+#header-socialmedia a {
+    margin-left: 2vh;
+    color: rgba(255, 255, 255, 0);
+    /*Paraq quitar las letras, molestan*/
+}
+
+/*Menu button Sytles for on click animation*/
+#home-menu {
+    display: flex;
+    justify-content: flex-end;
+    align-self: center;
+    vertical-align: middle;
+}
+
+#menu-btn {
+    margin-right: 4vh;
+    margin-top: 2vh;
+    width: 2.5rem;
+    height: 2.5rem;
+    cursor: pointer;
+    z-index: 10;
+}
+
+/* For look to the menu button style Sheet go to "menubtn.css"*/
+
+
+#appendMenu {
+    position: fixed;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+/*MENU BOARD*/
+#menu-board {
+    width: 50vw;
+    height: 100vh;
+    margin-left: 150vw;
+    background-color: #3D3D3D;
+    z-index: 1;
+}
+
+/*--> Menu board Links CSS Styles*/
+#board-displayer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 60vh;
+    margin-top: 8vh;
+    margin-left: 5vw;
+}
+
+#board-author {
+    display: flex;
+    flex-direction: column;
+    vertical-align: bottom;
+    height: fit-content;
+    width: 100%;
+    margin-left: 8vw;
+    color: #CEBCB2;
+    font-weight: 500;
+    margin-top: 25vh;
+}
+
+.board-links {
+    font-size: 64px;
+    text-decoration: none;
+    font-weight: 400;
+    color: #CEBCB2;
+    transition: 0.2s;
+    width: fit-content;
+    height: fit-content;
+    z-index: 10;
+}
+
+.board-links:hover {
+    font-size: 64px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #CEBCB2;
+    text-indent: 2vw;
+    transition: 0.3s;
+    width: fit-content;
+    z-index: 10;
+}
+
+body {
+    margin: 0 auto;
+    width: 100vw;
+    height: 100vh;
+}
+
+#main-content {
+    filter: blur(0px);
+    display: grid;
+    grid-template-columns: 50vh 50vh;
+    grid-template-rows: 50vh 50vh;
+    width: 100vw;
+    height: 100vh;
+}
+/*--> Main Content & Hello World */
+#maincontent-topLeft{
+    text-indent: 5vw;
+}
+#hw-word{
+    margin-top: 55%;
+    font-size: 64px;
+    
+}
+
+/*Load Screen*/
+#loadScreen{
+    width: 100vw;
+    height: 100vh;
+    margin: 100vw;
+    background-color: #3d3d3d;
+}
